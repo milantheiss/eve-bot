@@ -27,9 +27,9 @@ async def _ping(ctx):
 
 @bot.command(name="github")
 async def post_github(ctx):
-    embed = discord.Embed(title="Bester GitHub Acount",
-                          description="milllan's GitHub "
-                                      "\n**https://github.com/milantheiss**", color=0x0998c8)
+    embed = discord.Embed(title="GitHub Repository",
+                          description="GitHub Repository des Bots "
+                                      "\n**https://github.com/milantheiss/eve-bot**", color=0x0998c8)
     await ctx.send(embed=embed)
 
 
