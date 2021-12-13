@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 logger = logging.getLogger('DISCORD BOT')
 logger.setLevel(level=logging.INFO)
 
-load_dotenv()
+load_dotenv("private/.env")
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
