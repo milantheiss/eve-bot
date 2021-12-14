@@ -18,6 +18,7 @@ bot = commands.Bot(intents=intents, command_prefix=["eve ", "EVE "], help_comman
 @bot.event
 async def on_ready():
     print("EVE is ready to go")
+    await message.channel.send('The bot is online ')
 
 
 @bot.command(name='ping')
