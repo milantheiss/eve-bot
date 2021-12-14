@@ -3,6 +3,7 @@ import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+import random
 
 logger = logging.getLogger('DISCORD BOT')
 logger.setLevel(level=logging.INFO)
@@ -36,7 +37,7 @@ async def post_github(ctx):
 
 @bot.command(name="flipacoin")
 async def flip_a_coin(ctx):
-    random = round(random.random)
+    random = round(random.random())
     if random == 0:
         await ctx.send("Kopf")
     else:
