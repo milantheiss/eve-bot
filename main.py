@@ -37,8 +37,8 @@ async def post_github(ctx):
 
 @bot.command(name="flipacoin")
 async def flip_a_coin(ctx):
-    random = round(random.random())
-    if random == 0:
+    ran = round(random.random())
+    if ran == 0:
         await ctx.send("Kopf")
     else:
         await ctx.send("Zahl")
