@@ -33,6 +33,16 @@ async def post_github(ctx):
     await ctx.send(embed=embed)
 
 
+
+@bot.command(name="flipacoin")
+async def flip_a_coin(ctx):
+    random = round(random.random)
+    if random == 0:
+        await ctx.send("Kopf")
+    else:
+        await ctx.send("Zahl")
+
+
 @bot.command("help")
 async def send_help(ctx):
     embed = discord.Embed(title="Help", color=0x097dc8)
