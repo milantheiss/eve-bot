@@ -48,6 +48,7 @@ async def flip_a_coin(ctx):
 async def send_help(ctx):
     embed = discord.Embed(title="Help", color=0x097dc8)
     embed.add_field(name="`eve mitwirkende`", value="Jeder, der an diesem Projekt mitgearbeitet hat.", inline=False)
+    embed.add_field(name="`eve ping`", value="Test Bot", inline=False)
     embed.add_field(name="`eve github`", value="Link zum Source Code", inline=False)
     embed.add_field(name="`eve help`", value="Liste aller Befehle", inline=False)
     await ctx.send(embed=embed)
