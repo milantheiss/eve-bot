@@ -17,10 +17,10 @@ intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(intents=intents, command_prefix=["eve ", "EVE "], help_command=None)
 
-active = False
+active = True
 
 with open("config.json") as file:
-    bot_name = json.load(file)
+    bot_name = json.load(file).get("bot-name")
 
 
 @bot.event
@@ -63,10 +63,18 @@ async def send_help(ctx):
 
 
 @bot.command("setBotState")
-async def set_bot(ctx, bot, state):
-    if ctx.message.author.guild_permissions.administrator and bot == bot_name:
-        active = state
-        await ctx.send(f"EVE activ: {active}")
+async def set_bot(ctx, _bot, state):
+    global active
+    print(_bot)
+    print(bot_name)
+    if ctx.message.author.guild_permissions.administrator and _bot == bot_name:
+        print(state)
+        if state == "true" or state == "True":
+            active = True
+            await ctx.send("I am now active")
+        else:
+            active = False
+            await ctx.send("I am now NOT active")
 
 
 bot.run(TOKEN)
