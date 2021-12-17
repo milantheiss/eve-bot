@@ -1,5 +1,7 @@
 import logging
 import os
+import random
+
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -31,6 +33,15 @@ async def post_github(ctx):
                           description="GitHub Repository des Bots "
                                       "\n**https://github.com/milantheiss/eve-bot**", color=0x0998c8)
     await ctx.send(embed=embed)
+
+
+@bot.command(name="flipacoin")
+async def flip_a_coin(ctx):
+    ran = round(random.random())
+    if ran == 0:
+        await ctx.send("Kopf")
+    else:
+        await ctx.send("Zahl")
 
 
 @bot.command("help")
