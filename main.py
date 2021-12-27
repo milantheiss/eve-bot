@@ -7,6 +7,8 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
+#test
+
 logging.basicConfig(format="%(asctime)s %(levelname)s %(threadName)s %(name)s %(message)s")
 logger = logging.getLogger("main")
 logger.setLevel(logging.INFO)
